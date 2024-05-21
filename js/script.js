@@ -13,4 +13,15 @@ function getValues(event){
         "condition": this['condition'].value,
         "value":parseInt(this.value.value)
     }
+
+    let out = `
+    <p>Nickname:<span>${formData.name}</span></p>
+    <p>Vehicle Type: <span>${formData['veh-type']}</span></p>
+    <p>Make:<span>${formData.make}</span></p>
+    <p>Model:<span>${formData.model}</span></p>
+    <p>Registration: <span>${formData.registration}</span></p>
+    <p>Condition:<span>${formData['condition']}</span></p>
+    <p>Value :R <span>${formData.value}</span></p>
+    `
+    document.querySelector(".out code").innerHTML = out;
 }
